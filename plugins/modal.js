@@ -26,14 +26,21 @@ function _createModal(options) {
   return modal;
 }
 
-$modal = function (options) {
+$.modal = function (options) {
+  const ANIMATION_SPEED = 200;
   const $modal = _createModal(options);
+  let closing = false;
+
   return {
     open() {
-      $modal.classList.add("open");
+      !closing && $modal.classList.add("open");
     },
     close() {
       $modal.classList.remove("open");
+      $modal.classList.add("hide");
+      setTimeout(() => {
+        $modal.classList.remove("hide");
+      }, ANIMATION_SPEED);
     },
     destroy() {},
   };
