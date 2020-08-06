@@ -11,8 +11,7 @@ function _createModal(options) {
             <span class="modal-close">&times;</span>
           </div>
           <div class="modal-content">
-            <p>Lorem ipsum dolor sit.</p>
-            <p>Lorem ipsum dolor sit.</p>
+            ${options.content || ""}
           </div>
           <div class="modal-footer">
             <button>Да</button>
