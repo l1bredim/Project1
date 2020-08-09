@@ -62,17 +62,32 @@ const fib = [1, 1, 2, 3, 5, 8, 13];
 // });
 // console.log(filteredNumbers);
 
-const people = [
-  { name: "Viktoria", budget: 4200 },
-  { name: "Bodik", budget: 6200 },
-  { name: "Misha", budget: 1500 },
-];
+// const people = [
+//   { name: "Viktoria", budget: 4200 },
+//   { name: "Bodik", budget: 6200 },
+//   { name: "Misha", budget: 1500 },
+// ];
 
-const allBudget = people
-  .filter((person) => person.budget > 2000)
-  .reduce((acc, person) => {
-    acc += person.budget;
-    return acc;
-  }, 0);
+// const allBudget = people
+//   .filter((person) => person.budget > 2000)
+//   .reduce((acc, person) => {
+//     acc += person.budget;
+//     return acc;
+// //   }, 0);
 
-console.log(allBudget);
+// // console.log(allBudget);
+// let x = 3;
+// let y = 3;
+// let z = 3;
+// function winner(x, y, z) {
+//   const catADistance = Math.abs(x - z);
+//   const catBDistance = Math.abs(y - z);
+//   if (catADistance < catBDistance) {
+//     {
+//       return "Cat  A";
+//     }
+//   } else if (catBDistance < catADistance) {
+//     return "Cat B";
+//   }
+//   return "Mouse";
+// }
