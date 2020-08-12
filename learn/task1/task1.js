@@ -1,14 +1,16 @@
-const x = 1;
+const x = 4;
 const y = 3;
 const z = 5;
+
 function createLine(options) {
   const line = document.createElement("div");
+
   line.classList.add("line");
   line.insertAdjacentHTML(
     "afterbegin",
     ` <div class='line'>
         <div class='cat-a'>A</div>
-       <div class='cat-b'>B</div>
+        <div class='cat-b'>B</div>
         <div class='mouse'>M</div>
       </div>
             `
@@ -17,6 +19,12 @@ function createLine(options) {
   return line;
 }
 createLine();
+
+function points() {
+  const m = document.querySelector("mouse");
+  m.style.width = "100px";
+  return m;
+}
 
 function winner(x, y, z) {
   const catADistance = Math.abs(x - z);
