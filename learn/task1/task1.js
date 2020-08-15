@@ -1,7 +1,3 @@
-const x = 4;
-const y = 3;
-const z = 5;
-
 function createLine(options) {
   const line = document.createElement("div");
 
@@ -9,9 +5,10 @@ function createLine(options) {
   line.insertAdjacentHTML(
     "afterbegin",
     ` <div class='line'>
-        <div class='cat-a'>A</div>
-        <div class='cat-b'>B</div>
-        <div class='mouse'>M</div>
+    <div class='cat-a'></div>
+      <div class='cat-b'></div>
+      <div class='mouse'></div>
+        
       </div>
             `
   );
@@ -20,11 +17,38 @@ function createLine(options) {
 }
 createLine();
 
-function points() {
-  const m = document.querySelector("mouse");
-  m.style.width = "100px";
-  return m;
+
+const x = 4; const y = 3; const z = 5;
+function pointRange(){
+  const pointX = (500/10)*x-10;
+  const pointY = (500/10)*y-10;
+  const pointZ = (500/10)*z-10;
+
+  const rX = document.querySelector('.cat-a').style.marginLeft = pointX + 'px';
+  const rY = document.querySelector('.cat-b').style.marginLeft = pointY + 'px';
+  const rZ = document.querySelector('.mouse').style.marginLeft = pointZ + 'px';
+  console.log(rX);
+  console.log(rY);
+  console.log(rZ);
+  return rX,rY,rZ;
+  
 }
+pointRange();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function winner(x, y, z) {
   const catADistance = Math.abs(x - z);
@@ -38,3 +62,7 @@ function winner(x, y, z) {
   }
   return "Mouse";
 }
+
+
+
+
