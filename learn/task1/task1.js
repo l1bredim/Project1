@@ -15,10 +15,10 @@ function createLine(options) {
   document.body.appendChild(line);
   return line;
 }
-createLine();
 
 
-const x = 4; const y = 3; const z = 5;
+
+const x = 6; const y = 2; const z = 3;
 function pointRange(){
   const pointX = (500/10)*x-10;
   const pointY = (500/10)*y-10;
@@ -27,42 +27,25 @@ function pointRange(){
   const rX = document.querySelector('.cat-a').style.marginLeft = pointX + 'px';
   const rY = document.querySelector('.cat-b').style.marginLeft = pointY + 'px';
   const rZ = document.querySelector('.mouse').style.marginLeft = pointZ + 'px';
-  console.log(rX);
-  console.log(rY);
-  console.log(rZ);
   return rX,rY,rZ;
   
 }
-pointRange();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function winner(x, y, z) {
   const catADistance = Math.abs(x - z);
   const catBDistance = Math.abs(y - z);
   if (catADistance < catBDistance) {
     {
-      return "Cat  A";
+      return document.querySelector('.cat-a').style.background = '#02F322';
     }
   } else if (catBDistance < catADistance) {
-    return "Cat B";
+    return document.querySelector('.cat-b').style.background = '#02F322';
   }
-  return "Mouse";
+  return document.querySelector('.mouse').style.background = '#02F322';
 }
 
 
-
+createLine();
+pointRange();
+winner();
 
