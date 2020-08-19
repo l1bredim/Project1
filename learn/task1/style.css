@@ -5,43 +5,34 @@
 
 .line {
   width: 500px;
-  border-bottom: solid 3px black;
+  border-bottom: solid 1px black;
 }
 
-.cat-a {
+
+
+.circle {
   position: absolute;
   flex: 0 1 auto;
   font-size: 20px;
-  width: 50px;
-  height: 50px;
-  background: red;
+  width: 10px;
+  height: 10px;
+  background: black;
   border-radius: 10px;
+}
+
+
+.cat-a {
+  background: red;
 }
 
 .cat-b {
-  flex: 0 1 auto;
-  position: absolute;
-  font-size: 20px;
-  width: 50px;
-  height: 50px;  
-  background: red;
-  border-radius: 10px;
+  background: yellow;
 }
 
 .mouse {
-  flex: 0 1 auto;
-  position: absolute;
-
-  font-size: 20px;
-  width: 50px;
-  height: 50px;
-  background: red;
-  border-radius: 10px;
+  background: orange;
 }
 
-/* .winner {
-  width: 20px;
-  height: 20px;
+.winner {
   background: green;
-  border-radius: 10px;
-} */
+}
