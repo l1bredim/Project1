@@ -27,12 +27,12 @@ let arr = [];
 
 function matrix(n, m) {
   let number = 0;
-  for (i = 0; i < m; i++) {
+  for (i = m - 1; i >= 0; i--) {
     arr[i] = [];
-    for (j = 0; j < n; j++) {
+    for (j = n - 1; j >= 0; j--) {
       arr[i][j] = fib(number);
       number++;
     }
   }
-  console.log(arr);
+  return arr;
 }
