@@ -8,34 +8,38 @@ function spiral(n, call) {
   let startCol = 0;
   let endCol = n - 1;
 
-  while (startCol <= endRow && startRow <= endCol) {
-    // matrix generate UP
-    for (let col = startCol; col <= endCol; col++) {
-      matrix[startRow][col] = fib(counter);
-      counter++;
-    }
-    startRow++;
-    //matrix generate LEFT
-    for (let row = startRow; row <= endRow; row++) {
-      matrix[row][endCol] = fib(counter);
-      counter++;
-    }
-    endCol--;
-    //matrix generate DOWN
+  while (startCol <= endRow && endCol >= startRow) {
     for (let col = endCol; col >= startCol; col--) {
       matrix[endRow][col] = fib(counter);
       counter++;
     }
     endRow--;
-    //matrix generate UP
     for (let row = endRow; row >= startRow; row--) {
       matrix[row][startCol] = fib(counter);
       counter++;
     }
     startCol++;
+    for (let col = startCol; col <= endCol; col++) {
+      matrix[startRow][col] = fib(counter);
+      counter++;
+    }
+    startRow++;
+
+    for (let row = startRow; row <= endRow; row++) {
+      matrix[row][endCol] = fib(counter);
+      counter++;
+    }
+    endCol--;
   }
+
   return matrix;
 }
+// }
+// }
+// startRow++;
+//   startCol++;
+//   endRow--;
+//   endRow--;
 
 function fib(x) {
   if (x === 0) {
@@ -56,3 +60,19 @@ function fib(x) {
 }
 
 const call = fib();
+
+function fill(spiral) {
+  const tBody = document.getElementById("tBody");
+
+  spiral.forEach((row) => {
+    const tr = document.createElement("tr");
+    row.forEach((col) => {
+      const td = document.createElement("td");
+      td.innerText = col;
+      tr.appendChild(td);
+    });
+    tBody.appendChild(tr);
+  });
+}
+
+fill(spiral(5));
