@@ -1,9 +1,41 @@
-function matrixRotate(rotate, direction, matrix) {}
-//долго работает!!!!
-// function fib(n){
-//     if (n===1||n===2) return 1;
-//     else return fib(n-2)+fib(n-1);
-//     }
+function spiral(n, call) {
+  const matrix = Array.from({ length: n }, () => new Array(n).fill(0));
+  // return matrix;
+
+  let counter = 0;
+  let startRow = 0;
+  let endRow = n - 1;
+  let startCol = 0;
+  let endCol = n - 1;
+
+  while (startCol <= endRow && startRow <= endCol) {
+    // matrix generate UP
+    for (let col = startCol; col <= endCol; col++) {
+      matrix[startRow][col] = fib(counter);
+      counter++;
+    }
+    startRow++;
+    //matrix generate LEFT
+    for (let row = startRow; row <= endRow; row++) {
+      matrix[row][endCol] = fib(counter);
+      counter++;
+    }
+    endCol--;
+    //matrix generate DOWN
+    for (let col = endCol; col >= startCol; col--) {
+      matrix[endRow][col] = fib(counter);
+      counter++;
+    }
+    endRow--;
+    //matrix generate UP
+    for (let row = endRow; row >= startRow; row--) {
+      matrix[row][startCol] = fib(counter);
+      counter++;
+    }
+    startCol++;
+  }
+  return matrix;
+}
 
 function fib(x) {
   if (x === 0) {
@@ -23,16 +55,4 @@ function fib(x) {
   }
 }
 
-let arr = [];
-
-function matrix(n, m) {
-  let number = 0;
-  for (i = m - 1; i >= 0; i--) {
-    arr[i] = [];
-    for (j = n - 1; j >= 0; j--) {
-      arr[i][j] = fib(number);
-      number++;
-    }
-  }
-  return arr;
-}
+const call = fib();
