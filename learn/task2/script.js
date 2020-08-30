@@ -7,39 +7,28 @@ function spiral(n, call) {
   let endRow = n - 1;
   let startCol = 0;
   let endCol = n - 1;
-
   while (startCol <= endRow && endCol >= startRow) {
     for (let col = endCol; col >= startCol; col--) {
-      matrix[endRow][col] = fib(counter);
-      counter++;
+      matrix[endRow][col] = call(counter++);
     }
     endRow--;
     for (let row = endRow; row >= startRow; row--) {
-      matrix[row][startCol] = fib(counter);
-      counter++;
+      matrix[row][startCol] = call(counter++);
     }
     startCol++;
     for (let col = startCol; col <= endCol; col++) {
-      matrix[startRow][col] = fib(counter);
-      counter++;
+      matrix[startRow][col] = call(counter++);
     }
     startRow++;
 
     for (let row = startRow; row <= endRow; row++) {
-      matrix[row][endCol] = fib(counter);
-      counter++;
+      matrix[row][endCol] = call(counter++);
     }
     endCol--;
   }
 
   return matrix;
 }
-// }
-// }
-// startRow++;
-//   startCol++;
-//   endRow--;
-//   endRow--;
 
 function fib(x) {
   if (x === 0) {
@@ -59,8 +48,6 @@ function fib(x) {
   }
 }
 
-const call = fib();
-
 function fill(spiral) {
   const tBody = document.getElementById("tBody");
 
@@ -75,4 +62,4 @@ function fill(spiral) {
   });
 }
 
-fill(spiral(5));
+fill(spiral(5, fib));
