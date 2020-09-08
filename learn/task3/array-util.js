@@ -1,4 +1,4 @@
-//filter для понимания метода...
+//filter method
 function filter(array, callback) {
   const newArray = [];
   for (i = 0; i < array.length; i++) {
@@ -11,7 +11,7 @@ function filter(array, callback) {
   return newArray;
 }
 
-//forEach для понимания метода...
+//forEach method..
 function forEach(array, callback) {
   for (i = 0; i < array.length; i++) {
     const item = array[i];
