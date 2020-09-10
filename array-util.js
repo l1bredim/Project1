@@ -19,3 +19,13 @@ function forEach(array, callback) {
     console.log(oneCall);
   }
 }
+//map method
+function map(array, callback) {
+  const newArr = [];
+  for (i = 0; i < array.length; i++) {
+    const item = array[i];
+    const call = callback(item);
+    newArr.push(call);
+  }
+  return newArr;
+}
