@@ -25,16 +25,14 @@ function map(array, callback) {
   }
   return newArr;
 }
-const filterArr = filter(
-  arr,
-  (item) => getRandomInt(item) <= getRandomInt(item / 2)
-);
+const filterArr = filter(arr, (item) => item <= item <= item / 2);
 
-function li(item) {
-  return `<li>${item}</li>`;
-}
+// function li(item) {
+//   return ;
 
-const mapArr = map(filterArr, li);
+// }
+
+const mapArr = map(filterArr, (item) => item);
 
 function forEach(array, callback) {
   for (i = 0; i < array.length; i++) {
@@ -44,6 +42,25 @@ function forEach(array, callback) {
   }
 }
 
+// for (i = 0; i < 10; i++) {
+//   let li = document.createElement("li");
+//   li.append(getRandomInt(100));
+//   console.log(li);
+// }
+
+function getListContent() {
+  let fragment = new DocumentFragment();
+
+  for (let i = 1; i <= 3; i++) {
+    let li = document.createElement("li");
+    li.append(i);
+    fragment.append(li);
+  }
+
+  return fragment;
+}
+
+ul.append(getListContent()); // (*)
+
 console.log(arr);
 console.log(filterArr);
-console.log(mapArr);
