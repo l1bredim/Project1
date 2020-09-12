@@ -1,83 +1,85 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css");
-
-* {
-  font-family: "Open Sans", "sans-serif", "FontAwesome";
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 body {
   background: rgb(52, 56, 61);
-  padding: 80px;
+  color: white;
+}
+
+.data {
+  margin-left: 5%;
 }
 .container {
-  border: 1px solid black;
+  font-family: "Roboto", sans-serif;
+  border-radius: 25px 25px 0 0;
+  border: 1px solid white;
   position: absolute;
-  width: 400px;
+  width: 320px;
   left: 50%;
   margin-left: -160px;
   top: 50%;
   margin-top: -200px;
 }
-.input-data input {
-  height: 20px;
-  width: 40px;
-  border-radius: 8px;
-  position: relative;
+
+.container p {
+  font-family: "Roboto", sans-serif;
+  font-size: 11px;
+  text-decoration: underline;
+  padding: 3px;
 }
 
-.input-data input:focus {
-  background-color: red;
-  border: 1px solid #555;
-}
-.input-data p {
-  color: white;
-}
-.input-data h4 {
+.container h5 {
+  font-family: "Roboto", sans-serif;
+  font-size: 11px;
+  text-decoration: underline;
   margin: 0;
-  padding: 0;
-  color: rgb(66, 60, 60);
+  padding: 10px;
 }
 
-#task input[type="number"] {
-  position: relative;
-  display: block;
-  width: 280px;
-  height: 45px;
-  border: 0;
-  outline: 0;
-  top: -2px;
-  padding: 0 0 0 20px;
-  font-weight: 700;
-}
-#task input[type="number"],
-#task button {
-  background: rgb(38, 63, 100);
-  box-shadow: inset -100px -100px 0 rgb(28, 30, 33); /*Prevent yellow autofill color*/
-  color: rgb(52, 56, 61);
+.modal {
+  color: black;
+  height: 400px;
 }
 
-#task input[type="number"]:focus {
-  color: rgb(255, 255, 255);
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
 }
 
-#task button:hover {
-  color: rgb(0, 126, 165);
-  text-shadow: 0 0 10px rgb(0, 126, 165);
+.modal-window {
+  width: 600px;
+  border-radius: 5px;
+  background: #fff;
+  margin: 100px auto;
+}
+
+.modal-header {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed black;
+}
+
+.modal-title {
+  font-size: 1.3rem;
+}
+
+.modal-close {
   cursor: pointer;
 }
-#task p {
-  color: rgb(79, 85, 97);
-  padding: 0 20px;
-  font-weight: 700;
-  font-size: 12px;
-  margin: 5px 0 0 0;
+
+.modal-body {
+  padding: 10px;
+}
+.modal-body p {
+  margin: 0 0 5px;
 }
 
-#task p > a {
-  color: rgb(111, 119, 135);
-  text-decoration: none;
-}
-
-#task p > a:hover {
-  border-bottom: 1px solid;
+.modal-footer {
+  padding: 5px 10px;
+  border-top: 1px dashed black;
+  display: flex;
+  justify-content: flex-end;
 }
