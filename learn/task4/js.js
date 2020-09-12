@@ -25,7 +25,7 @@ function map(array, callback) {
   }
   return newArr;
 }
-const filterArr = filter(arr, (item) => item <= item <= item / 2);
+const filterArr = filter(arr, (item) => item <= item / 2);
 
 // function li(item) {
 //   return ;
@@ -47,20 +47,6 @@ function forEach(array, callback) {
 //   li.append(getRandomInt(100));
 //   console.log(li);
 // }
-
-function getListContent() {
-  let fragment = new DocumentFragment();
-
-  for (let i = 1; i <= 3; i++) {
-    let li = document.createElement("li");
-    li.append(i);
-    fragment.append(li);
-  }
-
-  return fragment;
-}
-
-ul.append(getListContent()); // (*)
 
 console.log(arr);
 console.log(filterArr);
