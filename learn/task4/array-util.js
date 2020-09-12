@@ -16,7 +16,6 @@ function forEach(array, callback) {
   for (i = 0; i < array.length; i++) {
     const item = array[i];
     const oneCall = callback(item);
-    console.log(oneCall);
   }
 }
 //map method

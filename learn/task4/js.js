@@ -3,45 +3,27 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 const n = 100;
-const arr = Array.from({ length: n }, () => getRandomInt(100));
+const max = 20;
+const arr = Array.from({ length: n }, () => getRandomInt(max));
 
-function filter(array, callback) {
-  const newArray = [];
-  for (i = 0; i < array.length; i++) {
-    const item = array[i];
-    const call = callback(item);
-    if (call) {
-      newArray.push(item);
-    }
+const filterArr = filter(arr, (item) => item <= max / 2);
+
+const mapArr = map(filterArr, function (item) {
+  const li = document.createElement("li");
+  if (item % 2 === 0) {
+    li.classList = "li-green";
+  } else {
+    li.classList = "li-red";
   }
-  return newArray;
-}
-function map(array, callback) {
-  const newArr = [];
-  for (i = 0; i < array.length; i++) {
-    const item = array[i];
-    const call = callback(item);
-    newArr.push(call);
-  }
-  return newArr;
-}
-const filterArr = filter(arr, (item) => item <= item / 2);
+  li.textContent = item;
+  return li;
+});
 
-// function li(item) {
-//   return ;
+const forEachArr = forEach(mapArr, function (item) {
+  const ul = document.querySelector("ul");
 
-// }
-
-const mapArr = map(filterArr, (item) => item);
-
-function forEach(array, callback) {
-  for (i = 0; i < array.length; i++) {
-    const item = array[i];
-    const oneCall = callback(item);
-    console.log(oneCall);
-  }
-}
-
+  ul.appendChild(item);
+});
 // for (i = 0; i < 10; i++) {
 //   let li = document.createElement("li");
 //   li.append(getRandomInt(100));
@@ -50,3 +32,5 @@ function forEach(array, callback) {
 
 console.log(arr);
 console.log(filterArr);
+console.log(mapArr);
+console.log(forEachArr);
