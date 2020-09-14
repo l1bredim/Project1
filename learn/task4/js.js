@@ -11,11 +11,12 @@ const filterArr = filter(arr, (item) => item <= max / 2);
 const mapArr = map(filterArr, function (item) {
   const li = document.createElement("li");
   if (item % 2 === 0) {
-    li.classList = "li-green";
+    li.classList.add("li-green");
   } else {
-    li.classList = "li-red";
+    li.classList.add("li-red");
   }
   li.textContent = item;
+  console.log(li.classList);
   return li;
 });
 
@@ -29,7 +30,7 @@ const forEachArr = forEach(mapArr, function (item) {
 //   li.append(getRandomInt(100));
 //   console.log(li);
 // }
-
+let call = document.querySelector("call");
 console.log(arr);
 console.log(filterArr);
 console.log(mapArr);
