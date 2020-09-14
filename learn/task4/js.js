@@ -2,7 +2,7 @@
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
-const n = 100;
+const n = 50;
 const max = 20;
 const arr = Array.from({ length: n }, () => getRandomInt(max));
 
@@ -35,3 +35,6 @@ console.log(arr);
 console.log(filterArr);
 console.log(mapArr);
 console.log(forEachArr);
+
+let amount = filterArr.reduce((total, item) => total + item, 0);
+console.log(amount);
