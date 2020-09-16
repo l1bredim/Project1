@@ -68,3 +68,8 @@ const mod = my.modal({
   <p>Вывод 3 инпута</p>`,
   width: "400px",
 });
+
+const btnCount = document.getElementById("count");
+const easyCount = document.getElementById("easy-task").value;
+const mediumCount = document.getElementById("medium-task").value;
+const hardCount = document.getElementById("hard-task").value;
