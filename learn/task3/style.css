@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 body {
-  background: rgb(52, 56, 61);
+  background: rgb(53, 53, 53);
   color: white;
 }
 
@@ -34,6 +34,37 @@ body {
   padding: 10px;
 }
 
+.modal.open .modal-window {
+  transform: translateY(200px);
+}
+
+.modal.open .modal-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+.modal.open .modal-overlay,
+.modal.open .modal-window {
+  opacity: 1;
+  z-index: 1000;
+}
+
+.modal.hide .modal-overlay,
+.modal.hide .modal-window {
+  opacity: 1;
+  z-index: 1000;
+}
+
+.modal.hide .modal-window {
+  transform: translateY(-200px);
+}
+
+.modal.hide .modal-overlay {
+  background: rgba(0, 0, 0, 0);
+}
+.modal-window,
+.modal-overlay {
+  opacity: 0;
+  z-index: -1;
+}
 .modal {
   color: black;
   height: 400px;
@@ -45,14 +76,18 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.2s ease-in;
 }
 
 .modal-window {
+  word-wrap: break-word;
   width: 600px;
   border-radius: 5px;
   background: #fff;
-  margin: 100px auto;
+  margin: 0 auto;
+  transform: translateY(-300px);
+  transition: transform 0.2s ease-in;
 }
 
 .modal-header {
@@ -82,9 +117,4 @@ body {
   border-top: 1px dashed black;
   display: flex;
   justify-content: flex-end;
-}
-
-.call {
-  background: yellow;
-  height: 200px;
 }
