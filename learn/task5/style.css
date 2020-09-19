@@ -118,9 +118,3 @@ body {
   display: flex;
   justify-content: flex-end;
 }
-
-.bottle {
-  width: 16px;
-  height: 16px;
-  background-image: url(big-bottle-of-water.png);
-}

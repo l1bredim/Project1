@@ -16,7 +16,6 @@ function createModal(options) {
             ? `<span class="modal-close" data-close="true" >&times;</span>`
             : ""
         }
-        
       </div>
       <div class="modal-body">
         ${options.content || ""}
@@ -38,6 +37,10 @@ my.modal = function (options) {
 
   const modal = {
     open() {
+      const count = countBottle();
+      for (i = 0; i < count; i++) {
+        createBottle();
+      }
       !closing && newModal.classList.add("open");
     },
     close() {
@@ -62,14 +65,36 @@ my.modal = function (options) {
 const mod = my.modal({
   title: "Булытки пиваса!!!",
   closable: true,
-  content: `
-  <p>Вывод 1 инпута</p>
-  <p>Вывод 2 инпута</p>
-  <p>Вывод 3 инпута</p>`,
+  content: `Количество бутылок `,
   width: "400px",
 });
 
 const btnCount = document.getElementById("count");
-const easyCount = document.getElementById("easy-task").value;
-const mediumCount = document.getElementById("medium-task").value;
-const hardCount = document.getElementById("hard-task").value;
+const imageBottle = document.querySelector("bottle");
+btnCount.addEventListener("click", function (event) {
+  mod.open();
+});
+
+function countBottle() {
+  const inputEasy = document.getElementById("easy-task").value;
+  const inputMedium = document.getElementById("medium-task").value;
+  const inputHard = document.getElementById("hard-task").value;
+
+  if (Number(inputEasy) === NaN || Number(inputEasy) === undefined) {
+    inputEasy = 0;
+  } else if (Number(inputMedium) === NaN || Number(inputMedium) === undefined) {
+    inputMedium = 0;
+  } else if (Number(inputHard) === NaN || Number(inputHard) === undefined) {
+    inputHard = 0;
+  }
+  const bottles = Number(inputEasy) + Number(inputMedium) + Number(inputHard);
+  return bottles;
+}
+
+function createBottle() {
+  const bottle = document.createElement("div");
+  bottle.classList.add("bottle");
+  bottle.insertAdjacentHTML("afterbegin", `<div class="bottle"></div>`);
+  document.body.appendChild(bottle);
+  return bottle;
+}
