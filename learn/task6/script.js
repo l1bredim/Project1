@@ -39,5 +39,5 @@ function reduce(arr, total, startValue) {
     newValue = total(newValue, arr[i]);
   }
 
-  return reduce(arr, total, total(newValue, arr[i], i, arr));
+  return reduce(arr, total, total(newValue, arr[i]));
 }
