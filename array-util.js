@@ -46,3 +46,30 @@ function reduce(arr, total, startValue) {
 
   return newValue;
 }
+
+//includes
+function includes(arr, item) {
+  for (let i = 0; i < arr.length; i++) {
+    let items = arr[i];
+    if (items === item) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+//intersection (50%)
+function intersection(arr1, arr2) {
+  let arr3 = [];
+  for (let i = 0; i < arr1.length; i++)
+    for (let j = 0; j < arr2.length; j++) {
+      const items1 = arr1[i];
+      const items2 = arr2[j];
+      if (items1 === items2) {
+        arr3.push(items1);
+      }
+    }
+
+  return arr3;
+}
