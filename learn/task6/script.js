@@ -37,23 +37,66 @@ function includes(arr, item) {
   return false;
 }
 
-// //наступна задача
-// на завтра або на сьогодні якшо встигнеш
+// Шоб вона повертала інтерсекшн будь якої кількості масивів.
 
-// intersection(array1, array2)  повертає масив значень які пересікаються
+// за допомогою рест оператору.
+// // як він працює
+// function rest(...rest) {
+//   return rest;
+// }
 
-// тобто intersection([5, 10, 15, 20], [15, 88, 1, 5, 7]) // 5, 15
+// const ARRAY = [
+//   [1, 2, 3],
+//   [555, 33, 1],
+//   [1, 2, 3, 4, 5, 6],
+// ];
+// const qqq = ARRAY.reduce((acc, start) => {
+//   const b = acc.filter((item) => item);
+//   const m = start.includes(b);
+//   console.log(m);
+//   // return acc;
+// });
+function intersection(...arrays) {
+  return arrays.reduce((acc, array) => {
+    return array.filter((item) => acc.includes(item));
+  });
+}
 
-function intersection(arr1, arr2) {
-  let arr3 = [];
-  for (let i = 0; i < arr1.length; i++)
-    for (let j = 0; j < arr2.length; j++) {
-      const items1 = arr1[i];
-      const items2 = arr2[j];
-      if (items1 === items2) {
-        arr3.push(items1);
-      }
+const array = [
+  0,
+  3,
+  7,
+  14,
+  15,
+  20,
+  27,
+  38,
+  39,
+  40,
+  51,
+  62,
+  73,
+  94,
+  115,
+  126,
+  157,
+  168,
+  199,
+];
+function binarSearch(value, array) {
+  let left = 0;
+  let right = array.length - 1;
+
+  while (left <= right) {
+    let center = left + Math.floor((right - left) / 2);
+    if (value === array[center]) {
+      return center;
     }
-
-  return arr3;
+    if (value < array[center]) {
+      right = center - 1;
+    } else {
+      left = center + 1;
+    }
+  }
+  return undefined;
 }

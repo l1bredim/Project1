@@ -63,9 +63,9 @@ my.modal = function (options) {
 };
 
 const mod = my.modal({
-  title: "Булытки пиваса!!!",
+  title: "Пивасик!!!",
   closable: true,
-  content: `Количество бутылок `,
+  content: ` `,
   width: "400px",
 });
 
@@ -80,14 +80,24 @@ function countBottle() {
   const inputMedium = document.getElementById("medium-task").value;
   const inputHard = document.getElementById("hard-task").value;
 
-  if (Number(inputEasy) === NaN || Number(inputEasy) === undefined) {
+  if (Number.isNaN(inputEasy) === NaN || Number(inputEasy) === undefined) {
     inputEasy = 0;
-  } else if (Number(inputMedium) === NaN || Number(inputMedium) === undefined) {
+  } else if (
+    Number.isNaN(inputMedium) === NaN ||
+    Number(inputMedium) === undefined
+  ) {
     inputMedium = 0;
-  } else if (Number(inputHard) === NaN || Number(inputHard) === undefined) {
+  } else if (
+    Number.isNaN(inputHard) === NaN ||
+    Number(inputHard) === undefined
+  ) {
     inputHard = 0;
   }
-  const bottles = Number(inputEasy) + Number(inputMedium) + Number(inputHard);
+  const easy = Math.floor(Number(inputEasy));
+  const medium = Math.floor(Number(inputMedium / 2));
+  const hard = Math.floor(Number(inputHard / 3));
+  const bottles = easy + medium + hard;
+
   return bottles;
 }
 
@@ -95,6 +105,6 @@ function createBottle() {
   const bottle = document.createElement("div");
   bottle.classList.add("bottle");
   bottle.insertAdjacentHTML("afterbegin", `<div class="bottle"></div>`);
-  document.body.appendChild(bottle);
+  document.querySelector(".modal-body").appendChild(bottle);
   return bottle;
 }

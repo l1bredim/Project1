@@ -34,6 +34,14 @@ body {
   padding: 10px;
 }
 
+p a {
+  color: gray;
+  text-decoration: none;
+}
+p a:hover {
+  color: rgb(185, 185, 185);
+  font-size: 14px;
+}
 .modal.open .modal-window {
   transform: translateY(200px);
 }
@@ -107,6 +115,8 @@ body {
 
 .modal-body {
   padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .modal-body p {
   margin: 0 0 5px;
@@ -123,4 +133,5 @@ body {
   width: 16px;
   height: 16px;
   background-image: url(big-bottle-of-water.png);
+  justify-content: flex-start;
 }

@@ -30,7 +30,6 @@ function map(array, callback) {
   return newArr;
 }
 
-
 //reduce
 const arr = [11, 22, 31, 43, 5, 64];
 function reduce(arr, total, startValue) {
@@ -72,11 +71,4 @@ function intersection(arr1, arr2) {
     }
 
   return arr3;
-}
-
-//intersection 100%version
-function intersection(...arrays) {
-  return arrays.reduce((acc, array) => {
-    return array.filter((item) => acc.includes(item));
-  });
 }
