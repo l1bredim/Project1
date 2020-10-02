@@ -19,6 +19,10 @@ body {
   margin-top: -200px;
 }
 
+.scroll-container{
+  overflow-y: auto;
+}
+
 .container p {
   font-family: "Roboto", sans-serif;
   font-size: 11px;
@@ -75,7 +79,7 @@ p a:hover {
 }
 .modal {
   color: black;
-  height: 400px;
+  max-height: 100%;
 }
 
 .modal-overlay {
