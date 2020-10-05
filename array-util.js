@@ -80,3 +80,22 @@ function intersection(...arrays) {
     return array.filter((item) => acc.includes(item));
   });
 }
+
+//binarSearch
+function binarSearch(value, array) {
+  let left = 0;
+  let right = array.length - 1;
+
+  while (left <= right) {
+    let center = left + Math.floor((right - left) / 2);
+    if (value === array[center]) {
+      return center;
+    }
+    if (value < array[center]) {
+      right = center - 1;
+    } else {
+      left = center + 1;
+    }
+  }
+  return undefined;
+}

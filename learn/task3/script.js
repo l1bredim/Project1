@@ -46,6 +46,7 @@ my.modal = function (options) {
       !closing && newModal.classList.add("open");
     },
     close() {
+      document.querySelector(".modal-body").innerHTML = "";
       closing = true;
       newModal.classList.remove("open");
       newModal.classList.add("hide");
