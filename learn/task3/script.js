@@ -7,7 +7,7 @@ function createModal(options) {
   modal.insertAdjacentHTML(
     "afterbegin",
     `
-    <div class = "scroll-container>"
+   
   <div class="modal-overlay" data-close="true">
     <div class="modal-window" style='width: ${options.width || DEFAULT_WIDTH}'>
       <div class="modal-header">
@@ -27,7 +27,7 @@ function createModal(options) {
       </div>
       </div>
     </div>
-  </div>
+  
 `
   );
   document.body.appendChild(modal);

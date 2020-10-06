@@ -99,3 +99,11 @@ function binarSearch(value, array) {
   }
   return undefined;
 }
+
+//union 
+function union(...arrays) {
+  return arrays.reduce((acc, array) => {
+    return acc.concat(array.filter((item) => !acc.includes(item)));
+  });
+}
+

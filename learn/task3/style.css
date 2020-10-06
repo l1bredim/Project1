@@ -19,10 +19,6 @@ body {
   margin-top: -200px;
 }
 
-.scroll-container{
-  overflow-y: auto;
-}
-
 .container p {
   font-family: "Roboto", sans-serif;
   font-size: 11px;
@@ -93,6 +89,8 @@ p a:hover {
 }
 
 .modal-window {
+  overflow-y: auto;
+  height: 300px;
   word-wrap: break-word;
   width: 600px;
   border-radius: 5px;
@@ -121,6 +119,7 @@ p a:hover {
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
+  overflow-y: auto;
 }
 .modal-body p {
   margin: 0 0 5px;
