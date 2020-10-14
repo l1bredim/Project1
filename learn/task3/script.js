@@ -22,8 +22,7 @@ function createModal(options) {
         ${options.content || ""}
       </div>
       <div class="modal-footer">
-        <button id="myButton">OK</button>
-        <button id="close" data-close="true" >Cancel</button>
+        <button id="close" data-close="true" >Выйти</button>
       </div>
       </div>
     </div>
@@ -49,7 +48,7 @@ my.modal = function (options) {
       document.querySelector(".modal-body").innerHTML = "";
       closing = true;
       newModal.classList.remove("open");
-      newModal.classList.add("hide");
+    
       setTimeout(() => {
         newModal.classList.remove("hide");
         closing = false;
@@ -75,32 +74,39 @@ const mod = my.modal({
 const btnCount = document.getElementById("count");
 const imageBottle = document.querySelector("bottle");
 btnCount.addEventListener("click", function (event) {
+
   mod.open();
 });
+
+//press Enter
+window.addEventListener('keypress', function(e) {
+  const event = e.keyCode;
+  if (event===13) {
+  mod.open();
+  }
+})
+
+window.addEventListener('keypress', function(e) {
+  const event = e.keyCode;
+  console.log(event);
+  if (event===13) {
+  mod.open();}
+ 
+})
 
 function countBottle() {
   const inputEasy = document.getElementById("easy-task").value;
   const inputMedium = document.getElementById("medium-task").value;
   const inputHard = document.getElementById("hard-task").value;
 
-  if (Number.isNaN(inputEasy) === NaN || Number(inputEasy) === undefined) {
-    inputEasy = 0;
-  } else if (
-    Number.isNaN(inputMedium) === NaN ||
-    Number(inputMedium) === undefined
-  ) {
-    inputMedium = 0;
-  } else if (
-    Number.isNaN(inputHard) === NaN ||
-    Number(inputHard) === undefined
-  ) {
-    inputHard = 0;
-  }
+  if (Number.isNaN(inputEasy)) {inputEasy = 0;} 
+  else if (Number.isNaN(inputMedium)) { inputMedium = 0;} 
+  else if (Number.isNaN(inputHard)) {inputHard = 0;}
+
   const easy = Math.floor(Number(inputEasy));
   const medium = Math.floor(Number(inputMedium / 2));
   const hard = Math.floor(Number(inputHard / 3));
   const bottles = easy + medium + hard;
-
   return bottles;
 }
 

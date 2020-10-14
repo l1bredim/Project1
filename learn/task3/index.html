@@ -12,12 +12,12 @@
       <div class="data">
         <h5>Легкая задача</h5>
         <form id="task" method="" action="" autocomplete="off">
-          <input type="number" id="easy-task" />
+          <input type="number" id="easy-task" min="0" max="999" oninput="validity.valid||(value='');" />
           <h5>Задача средней тяжести</h5>
-          <input type="number" id="medium-task" />
+          <input type="number" id="medium-task"min="0" max="999" oninput="validity.valid||(value='');"/>
           <h5>Без пивка не обойтись</h5>
-          <input type="number" id="hard-task" />
-          <button id="count" type="button">Отправить</button>
+          <input type="number" id="hard-task"min="0"  max="999" oninput="validity.valid||(value='');" />
+          <button id="count" type="button" >Отправить</button>
           <p>
             Позвонить <strong>Андрюшке</strong> и спросить как он там???
             Живой???
