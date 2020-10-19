@@ -76,12 +76,14 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  width: 100%;
 }
 
 .container-menu {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+  margin-top: -300px;
 }
 
 .container-content {
@@ -89,7 +91,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 150px;
+  width: 100%;
 }
 
 .submenu li {
