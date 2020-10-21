@@ -1,14 +1,13 @@
-let arr = [15,4,7,2];
 
-// let object = arr.reduce(function(acc,cur,i) {
-   
-// },{})
-
-// console.log(object)
-
-function toObject(arr) {
-    var obj = {};
-    for (var i = 0; i < arr.length; ++i)
-      obj[i] = arr[i];
-    return obj;
+  const array = [15,4,7,2];
+  const map = {};
+  function toObject(array) {
+    let item = 0; 
+    for (let i = 0; i<array.length; i++) {
+        const key = array[i];
+        let value = item;
+        map[key]=value;
+        item++;
+    }
+    return map;
   }
