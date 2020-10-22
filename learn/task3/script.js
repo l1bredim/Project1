@@ -88,7 +88,6 @@ window.addEventListener('keypress', function(e) {
 
 window.addEventListener('keypress', function(e) {
   const event = e.keyCode;
-  console.log(event);
   if (event===13) {
   mod.open();}
  
