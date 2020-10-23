@@ -1,5 +1,5 @@
 
-  const array = [15,4,7,2];
+  const array = [15,4,7,2,2,2];
   const map = {};
   function toObject(array) {
     let item = 0; 
