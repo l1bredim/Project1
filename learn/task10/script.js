@@ -13,8 +13,8 @@ const ln2 = sortCookies.length
 let countChilds = 0;
 
 function childrens(sortChild,sortCookies) {
-  let i = 0;
-  while (i > ln1) {
+  let i = 0; 
+  while (i == 0) {
       
     if (sortChild[i]==sortCookies[i]) {
       countChilds++
