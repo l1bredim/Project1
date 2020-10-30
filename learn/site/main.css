@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap");
+@font-face {
+  font-family: "Social-Icons";
+  src: url("font/social.eot") format("eot");
+  src: url("font/social.svg") format("svg");
+  src: url("font/social.ttf") format("ttf");
+  src: url("font/social.woff") format("woff");
+  src: url("font/social.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   background-image: url(img/background.png);
   background-repeat: no-repeat;
@@ -20,6 +30,7 @@ body {
 }
 
 .social-contacts {
+  font-family: "Social-Icons";
   width: 150px;
   height: 1045px;
   background: rgba(51, 51, 51, 0.75);
@@ -90,11 +101,14 @@ body {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
+  margin-top: 10%;
 }
 
 .submenu li {
+  font-family: "Social-Icons";
+
   font-size: 24px;
   margin-bottom: 20px;
 }
@@ -113,6 +127,7 @@ body {
 }
 
 .social-info {
+  font-family: "Social-Icons";
   font-size: 18px;
   letter-spacing: 0.1em;
   font-weight: 700;
@@ -121,7 +136,6 @@ body {
   margin-top: 383px;
   padding: 5px;
   writing-mode: vertical-rl;
-  font-family: Open Sans Condensed;
   transform: rotate(-180deg);
 }
 .social-info::before {
@@ -137,8 +151,18 @@ body {
 
 .content-first-block h1 {
   color: #fff;
+  font-size: 64px;
+}
+
+.content-first-block p {
+  font-family: Open Sans;
+  color: #fff;
+  font-size: 14px;
+  line-height: 21px;
+  opacity: 85%;
 }
 
 .content-first-block {
+  min-width: 540px;
   width: 30%;
 }

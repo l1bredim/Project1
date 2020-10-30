@@ -1,5 +1,5 @@
-const array = [1,2,1,10,3];
-const target = 4;
+const array = [1,2,1,4,5];
+const target = 5;
 
 // function indexElement(array) {
 //  for(let i=0; i<array.length-1; i++) 
@@ -26,18 +26,34 @@ const map = {};
     return map;
   }
 
-  function coupleIndexs(array) {
-    let map = toObject(array);
-    for (let i=0; i< array.length; i++) {
-      let item = array[i];
-      let j = [target-item];
-      if (map !== undefined) {
-        let mark = map.hasOwnProperty(target-item);
-        if (mark === true) {
-          if (j!==i) {
-            return [j,i];
-          }
-      }
-    }
+
+
+  function toMap(array) {
+    const map = {};
+
+    array.forEach((value, element) => {
+      map[value]=element;
+      
+    })
+    return map;
   }
-}
+
+
+  function sumElement(array,target) {
+    const map = toMap(array)
+    
+    for (let i= 0; i < array.length; i++) {
+      const currentElement = array[i];
+      const num = target-currentElement;
+      const index = map[num] ;
+      
+      if (index!== undefined && index!==i) {
+        return [i,index]
+      }
+
+      
+    }
+
+    return [];
+  }
+  
