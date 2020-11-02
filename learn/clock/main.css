@@ -33,3 +33,7 @@ body {
 .text {
   text-decoration: underline;
 }
+
+.red {
+  color: red;
+}

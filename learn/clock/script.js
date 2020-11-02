@@ -13,14 +13,19 @@ function clock() {
        months.innerText = '0' + month;
     } else (months.innerText =  month);
     if (hour < 10) {
+       
         hours.innerText = '0' + hour;
      } else (hours.innerText =  hour);
      if (min < 10) {
         minutes.innerText = '0' + min;
      } else (minutes.innerText =  min);
      if (sec < 10) {
+        seconds.classList.add('red');
         seconds.innerText = '0' + sec;
-     } else (seconds.innerText =  sec);
+     } else 
+         
+         { seconds.classList.remove('red');
+             seconds.innerText =  sec};
 }
 clock();
 setInterval(clock,1000);
