@@ -11,9 +11,9 @@ function clockAnalog() {
    const min = day.getMinutes()*degMin;
    const sec = day.getSeconds()*degSec;
 
-   arrowHour.style.transform = `rotateZ(${(hour) + (degMin/2)}deg)`;
-   arrowMinute.style.transform = `rotateZ(${min}deg)`;
-   arrowSecond.style.transform = `rotateZ(${sec}deg)`;
+   arrowHour.style.transform =  'rotateZ('+hour+(degMin/2)+'deg';
+   arrowMinute.style.transform =  'rotateZ(' + min +'deg';
+   arrowSecond.style.transform =  'rotateZ('+ sec + 'deg';
 }
 
 

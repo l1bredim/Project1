@@ -39,6 +39,7 @@ body {
   border-bottom: 100px solid black;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
+  transform-origin: bottom;
 }
 .clock-arrow-m {
   top: 50px;
@@ -49,6 +50,7 @@ body {
   border-bottom: 150px solid blue;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
+  transform-origin: bottom;
 }
 .clock-arrow-s {
   position: absolute;
@@ -59,6 +61,7 @@ body {
   border-bottom: 200px solid red;
   border-left: 2px solid transparent;
   border-right: 2px solid transparent;
+  transform-origin: bottom;
 }
 
 .h12 {
