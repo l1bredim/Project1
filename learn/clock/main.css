@@ -8,6 +8,7 @@ body {
   box-sizing: border-box;
   background: url(img/city_background.webp) no-repeat;
   background-size: cover;
+  background-position: top;
 }
 
 .container {
@@ -25,7 +26,7 @@ body {
 .time {
   display: flex;
   align-items: stretch;
-  font-size: 70px;
+  font-size: 40px;
   margin: 0 0 20px;
   color: rgb(48, 48, 48);
 }
