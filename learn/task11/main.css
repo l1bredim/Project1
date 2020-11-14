@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.slider {
+  width: 800px;
+  height: 500px;
+  border: 5px solid black;
+}
+
+.slider__item img {
+  height: 491px;
+  width: 791px;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slide {
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
