@@ -55,10 +55,3 @@
   border: 1px solid white;
   border-radius: 30%;
 }
-
-.point:hover {
-  width: 14px;
-  background: gray;
-  height: 14px;
-  opacity: 0.9;
-}
