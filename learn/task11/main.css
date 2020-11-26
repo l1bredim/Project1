@@ -27,3 +27,38 @@
 .slide.active {
   display: block;
 }
+
+.point {
+  padding: 5px;
+  cursor: pointer;
+  width: 13px;
+  margin-left: 5px;
+  height: 13px;
+  background: black;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.points_wrapper {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  margin-top: -25px;
+  padding: 5px;
+}
+
+.point.active {
+  width: 13px;
+  margin-left: 5px;
+  height: 13px;
+  background: rgb(102, 32, 32);
+  border: 1px solid white;
+  border-radius: 30%;
+}
+
+.point:hover {
+  width: 14px;
+  background: gray;
+  height: 14px;
+  opacity: 0.9;
+}
