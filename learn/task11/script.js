@@ -1,27 +1,27 @@
 const btnNext = document.querySelector('.item_next'),
-      btnPrev = document.querySelector('.item_prev'),
-      slides = document.querySelectorAll('.slide');
-      points = document.querySelectorAll('.point');
+  btnPrev = document.querySelector('.item_prev'),
+  slides = document.querySelectorAll('.slide'),
+  points = document.querySelectorAll('.point');
 
 
 let index = 0;
 
 function activePoint(item) {
-  for(point of points) {
+  for (point of points) {
     point.classList.remove('active')
   }
   points[item].classList.add('active');
 }
 
 function activeSlide(item) {
-  for(slide of slides) {
+  for (slide of slides) {
     slide.classList.remove('active')
   }
   slides[item].classList.add('active');
 }
 
 function nextSlide() {
-  if (index == slides.length-1) {
+  if (index == slides.length - 1) {
     index = 0;
     activeSlide(index);
     activePoint(index);
@@ -37,7 +37,7 @@ function nextSlide() {
 
 function prevSlide() {
   if (index == 0) {
-    index = slides.length-1;
+    index = slides.length - 1;
     activeSlide(index);
     activePoint(index);
   } else {
@@ -47,15 +47,24 @@ function prevSlide() {
   }
 }
 
-points.forEach((item, indexPoint)=> {
-  item.addEventListener('click', ()=> {
+points.forEach((item, indexPoint) => {
+  item.addEventListener('click', () => {
     index = indexPoint;
     activePoint(index);
     activeSlide(index)
   })
-  
+
 })
 btnNext.addEventListener('click', nextSlide);
 btnPrev.addEventListener('click', prevSlide);
 
 
+window.onload = main;
+function main() {
+  const wrapper = document.querySelector(".wrapper")
+
+  const slider = new Slider(wrapper);
+}
+
+
+let div = document.createElement('div');
