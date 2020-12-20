@@ -59,45 +59,33 @@
 .buttons {
   margin-top: 15px;
   position: absolute;
-  box-sizing: border-box;
+  
 }
 
 .item_prev {
-  background: rgb(202, 202, 202);
-  width: 50px;
-  height: 40px;
-  border: 0 transparent;
+
+  margin: 5px;
+  border: 20px solid transparent; 
+  border-right: 30px solid  rgb(102, 32, 32);
+  
 }
 
 .item_next {
-  background: rgb(202, 202, 202);
-
-  width: 50px;
-  height: 40px;
-  border: 0 transparent;
+  border: 20px solid transparent;
+   border-left: 30px solid   rgb(102, 32, 32);
 }
 
 .item_prev:focus {
-  background: rgb(99, 98, 98);
   outline: 0;
-  box-sizing: border-box;
+ 
 }
 .item_next:focus {
-  background: rgb(99, 98, 98);
   outline: 0;
-  box-sizing: border-box;
 }
 
-.item_prev:hover {
-  background: rgb(99, 98, 98);
-  border-radius: 20%;
-  outline: 0;
-  box-sizing: border-box;
-}
 .item_next:hover {
-  border-radius: 20%;
-
-  background: rgb(99, 98, 98);
-  outline: 0;
-  box-sizing: border-box;
+cursor: pointer;;
 }
+.item_prev:hover {
+  cursor: pointer;;
+  }

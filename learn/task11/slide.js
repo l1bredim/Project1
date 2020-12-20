@@ -1,15 +1,22 @@
 class Slider {
     constructor(container, options) {
+        this.slides = container.querySelectorAll('.slide');
+        this.points = container.querySelectorAll('.point');
+
+        this.createStructure(container);
+        this.createItem = container.querySelector('.slider__item');
+        this.newPoints = container.querySelector('.points_wrapper');
 
 
-
-        let div = documnet.createElement('div');
-
+        for (const slide of this.slides) {
+            for (const point of this.points) {
+                this.createItem.appendChild(slide);
+                this.newPoints.appendChild(point);
+            }
+        }
 
         this.btnNext = container.querySelector('.item_next');
         this.btnPrev = container.querySelector('.item_prev');
-        this.slides = container.querySelectorAll('.slide');
-        this.points = container.querySelectorAll('.point');
 
         this.index = 0;
         this.points.forEach((item, indexPoint) => {
@@ -32,7 +39,7 @@ class Slider {
 
         } else {
             this.index++
-            this.activeSlide(this.index);
+                this.activeSlide(this.index);
             this.activePoint(this.index);
 
         }
@@ -44,7 +51,7 @@ class Slider {
             this.activePoint(this.index);
         } else {
             this.index--
-            this.activePoint(this.index);
+                this.activePoint(this.index);
             this.activeSlide(this.index);
         }
     }
@@ -60,4 +67,22 @@ class Slider {
         }
         this.slides[item].classList.add('active');
     }
+
+    createStructure(container) {
+        container.innerHTML =
+            `
+        <div class="slider">
+            <div class="slider__item">
+            </div>
+            <div class="buttons">
+                <button class="item_prev" type="button"></button>
+                <button class="item_next" type="button"></button>
+            </div>
+            <div class="points_wrapper">
+                
+            </div>
+        </div>
+        `
+    }
+
 }
