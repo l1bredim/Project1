@@ -1,22 +1,24 @@
 class Slider {
     constructor(container, options) {
         this.slides = container.querySelectorAll('.slide');
-        this.points = container.querySelectorAll('.point');
 
         this.createStructure(container);
+
         this.createItem = container.querySelector('.slider__item');
-        this.newPoints = container.querySelector('.points_wrapper');
+        this.createPoints = container.querySelector('.points_wrapper');
 
 
         for (const slide of this.slides) {
-            for (const point of this.points) {
-                this.createItem.appendChild(slide);
-                this.newPoints.appendChild(point);
-            }
+            this.createItem.appendChild(slide);
+
         }
+
 
         this.btnNext = container.querySelector('.item_next');
         this.btnPrev = container.querySelector('.item_prev');
+
+        this.points = container.querySelectorAll('.point');
+
 
         this.index = 0;
         this.points.forEach((item, indexPoint) => {
@@ -81,6 +83,15 @@ class Slider {
             <div class="points_wrapper">
                 
             </div>
+        </div>
+        `
+    }
+
+
+    createPoint(container) {
+        container.innerHTML =
+            `
+        <div class ="point">
         </div>
         `
     }
