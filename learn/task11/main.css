@@ -1,91 +1,92 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  margin: 0 auto;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
 }
 
 .slider {
-  width: 800px;
-  height: 500px;
-  border: 5px solid black;
+    width: 800px;
+    height: 500px;
+    border: 5px solid black;
 }
 
 .slider__item img {
-  height: 491px;
-  width: 791px;
+    height: 491px;
+    width: 791px;
 }
+
 .wrapper {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .slide {
-  display: none;
+    display: none;
 }
 
 .slide.active {
-  display: block;
+    display: block;
 }
 
 .point {
-  padding: 5px;
-  cursor: pointer;
-  width: 13px;
-  margin-left: 5px;
-  height: 13px;
-  background: black;
-  border-radius: 50%;
-  border: 1px solid white;
+    padding: 5px;
+    cursor: pointer;
+    width: 13px;
+    margin-left: 5px;
+    height: 13px;
+    background: black;
+    border-radius: 50%;
+    border: 1px solid white;
 }
 
 .points_wrapper {
-  width: 200px;
-  display: flex;
-  justify-content: center;
-  margin-top: -25px;
-  padding: 5px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    margin-top: -25px;
+    padding: 5px;
 }
 
 .point.active {
-  width: 13px;
-  margin-left: 5px;
-  height: 13px;
-  background: rgb(102, 32, 32);
-  border: 1px solid white;
-  border-radius: 30%;
+    width: 13px;
+    margin-left: 5px;
+    height: 13px;
+    background: rgb(102, 32, 32);
+    border: 1px solid white;
+    border-radius: 30%;
 }
 
 .buttons {
-  margin-top: 15px;
-  position: absolute;
-  
+    margin-top: 15px;
+    position: absolute;
 }
 
 .item_prev {
-
-  margin: 5px;
-  border: 20px solid transparent; 
-  border-right: 30px solid  rgb(102, 32, 32);
-  
+    margin: 5px;
+    border: 20px solid transparent;
+    border-right: 30px solid rgb(102, 32, 32);
 }
 
 .item_next {
-  border: 20px solid transparent;
-   border-left: 30px solid   rgb(102, 32, 32);
+    border: 20px solid transparent;
+    border-left: 30px solid rgb(102, 32, 32);
 }
 
 .item_prev:focus {
-  outline: 0;
- 
+    outline: 0;
 }
+
 .item_next:focus {
-  outline: 0;
+    outline: 0;
 }
 
 .item_next:hover {
-cursor: pointer;;
+    cursor: pointer;
+    ;
 }
+
 .item_prev:hover {
-  cursor: pointer;;
-  }
+    cursor: pointer;
+    ;
+}

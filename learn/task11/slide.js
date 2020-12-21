@@ -5,13 +5,15 @@ class Slider {
         this.createStructure(container);
 
         this.createItem = container.querySelector('.slider__item');
-        this.createPoints = container.querySelector('.points_wrapper');
+        this.wrapPoint = container.querySelector('.points_wrapper');
 
-
+        const newPoint = document.createElement('div');
         for (const slide of this.slides) {
             this.createItem.appendChild(slide);
+            this.createPoint(container);
 
         }
+
 
 
         this.btnNext = container.querySelector('.item_next');
@@ -88,12 +90,11 @@ class Slider {
     }
 
 
+
     createPoint(container) {
-        container.innerHTML =
-            `
-        <div class ="point">
-        </div>
-        `
+        const point = document.createElement('div');
+        point.classList.add('point');
+        this.wrapPoint.appendChild(point);
     }
 
 }
