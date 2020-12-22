@@ -1,5 +1,13 @@
 class Slider {
     constructor(container, options) {
+        this.options = {
+            activeSlide: 4,
+            showPoints: false,
+            showButtons: false,
+            loop: true
+        }
+
+
         this.slides = container.querySelectorAll('.slide');
 
         this.createStructure(container);
@@ -8,10 +16,18 @@ class Slider {
         this.wrapPoint = container.querySelector('.points_wrapper');
 
         const newPoint = document.createElement('div');
-        for (const slide of this.slides) {
-            this.createItem.appendChild(slide);
-            this.createPoint(container);
 
+        for (const slide of this.slides) {
+            if ((this.options.activeSlide) > this.slides.length) {
+                this.createItem.appendChild(slide);
+                this.createPoint(container);
+
+            } else if (this.options.activeSlide) {
+                this.activeSlide(this.options.activeSlide);
+                this.createPoint(container)
+
+            }
+            this.createItem.appendChild(slide);
         }
 
 
@@ -96,5 +112,8 @@ class Slider {
         point.classList.add('point');
         this.wrapPoint.appendChild(point);
     }
+
+
+
 
 }

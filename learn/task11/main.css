@@ -17,6 +17,7 @@
 }
 
 .wrapper {
+    margin-bottom: 100px;
     display: flex;
     justify-content: space-between;
 }
@@ -63,12 +64,14 @@
 }
 
 .item_prev {
-    margin: 5px;
+    background: none;
     border: 20px solid transparent;
     border-right: 30px solid rgb(102, 32, 32);
 }
 
 .item_next {
+    margin-left: 30px;
+    background: none;
     border: 20px solid transparent;
     border-left: 30px solid rgb(102, 32, 32);
 }
