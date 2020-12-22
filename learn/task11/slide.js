@@ -1,7 +1,7 @@
 class Slider {
     constructor(container, options) {
         this.options = {
-            activeSlide: 4,
+            activeSlide: 2,
             showPoints: false,
             showButtons: false,
             loop: true
@@ -11,11 +11,8 @@ class Slider {
         this.slides = container.querySelectorAll('.slide');
 
         this.createStructure(container);
-
         this.createItem = container.querySelector('.slider__item');
         this.wrapPoint = container.querySelector('.points_wrapper');
-
-        const newPoint = document.createElement('div');
 
         for (const slide of this.slides) {
             if ((this.options.activeSlide) > this.slides.length) {
