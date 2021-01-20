@@ -11,9 +11,9 @@ class Slider {
         this.slides = container.querySelectorAll('.slide');
 
         this.createStructure(container);
-        if (this.options.showButtons === true) {
-            createButtons(container);
-        }
+        // if (this.options.showButtons === true) {
+        //     createButtons(container);
+        // }
         this.createItem = container.querySelector('.slider__item');
         this.wrapPoint = container.querySelector('.points_wrapper');
 
@@ -121,7 +121,9 @@ class Slider {
     `
     }
 
+    animatios() {
 
+    }
 
 
 }
