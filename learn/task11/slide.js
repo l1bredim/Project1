@@ -1,9 +1,9 @@
 class Slider {
     constructor(container, options) {
         this.options = {
-            activeSlide: 2,
-            showPoints: false,
-            showButtons: false,
+            activeSlide: 3,
+            showPoints: true,
+            showButtons: true,
             loop: true
         }
 
@@ -11,6 +11,9 @@ class Slider {
         this.slides = container.querySelectorAll('.slide');
 
         this.createStructure(container);
+        if (this.options.showButtons === true) {
+            createButtons(container);
+        }
         this.createItem = container.querySelector('.slider__item');
         this.wrapPoint = container.querySelector('.points_wrapper');
 
@@ -26,7 +29,6 @@ class Slider {
             }
             this.createItem.appendChild(slide);
         }
-
 
 
         this.btnNext = container.querySelector('.item_next');
@@ -91,10 +93,6 @@ class Slider {
         <div class="slider">
             <div class="slider__item">
             </div>
-            <div class="buttons">
-                <button class="item_prev" type="button"></button>
-                <button class="item_next" type="button"></button>
-            </div>
             <div class="points_wrapper">
                 
             </div>
@@ -106,8 +104,21 @@ class Slider {
 
     createPoint(container) {
         const point = document.createElement('div');
-        point.classList.add('point');
-        this.wrapPoint.appendChild(point);
+        if (this.options.showPoints === true) {
+            point.classList.add('point');
+            this.wrapPoint.appendChild(point);
+        } else point.classList.remove('point');
+
+    }
+
+    createButtons(container) {
+        container.innerHTML =
+            `
+        <div class="buttons">
+                <button class="item_prev" type="button"></button>
+                <button class="item_next" type="button"></button>
+            </div>
+    `
     }
 
 
