@@ -1,30 +1,14 @@
 .container_st {
+  margin-left: 30px;
 }
 .build_guitars {
   display: flex;
   width: 270px;
 }
-.cell_1 {
+.cell:nth-child(n) {
   width: 45px;
   text-align: center;
 }
-.cell_2 {
-  width: 45px;
-  text-align: center;
-}
-.cell_3 {
-  width: 45px;
-  text-align: center;
-}
-.cell_5 {
-  width: 45px;
-  text-align: center;
-}
-.cell_6 {
-  width: 45px;
-  text-align: center;
-}
-
 .wrapp {
   display: inline-flex;
   flex-direction: column;
@@ -34,95 +18,16 @@
   display: flex;
   width: 270px;
   height: 40px;
-  border: 1px solid black;
 }
-.guitar_neck_1 {
+
+.guitar_neck:nth-child(n) {
   width: 45px;
   height: 40px;
-  border: 1px solid black;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
 }
-.guitar_neck_2 {
+.guitar_neck:nth-child(6n + 1) {
   width: 45px;
   height: 40px;
-  border: 1px solid black;
-}
-.guitar_neck_3 {
-  width: 45px;
-  height: 40px;
-  border: 1px solid black;
-}
-.guitar_neck_4 {
-  width: 45px;
-  height: 40px;
-  border: 1px solid black;
-}
-.guitar_neck_5 {
-  width: 45px;
-  height: 40px;
-  border: 1px solid black;
-}
-.guitar_neck_6 {
-  width: 45px;
-  height: 40px;
-  border: 1px solid black;
-}
-.guitar_neck_7 {
-  width: 45px;
-  height: 40px;
-  border: 1px solid black;
-}
-.guitar_neck_8 {
-  width: 45px;
-  height: 40px;
-  border: 1px solid black;
-}
-.guitar_neck_9 {
-  width: 45px;
-  height: 40px;
-  border: 1px solid black;
-}
-.guitar_neck_10 {
-  width: 45px;
-  height: 40px;
-  border: 1px solid black;
-}
-.guitar_neck_11 {
-  width: 45px;
-  height: 40px;
-  border: 1px solid black;
-}
-.guitar_neck_12 {
-  width: 45px;
-  height: 40px;
-  border: 1px solid black;
-}
-.guitar_neck_13 {
-  width: 45px;
-  height: 40px;
-  border: 1px solid black;
-}
-.guitar_neck_14 {
-  width: 45px;
-  height: 40px;
-  border: 1px solid black;
-}
-.guitar_neck_15 {
-  width: 45px;
-  height: 40px;
-  border: 1px solid black;
-}
-.guitar_neck_16 {
-  width: 45px;
-  height: 40px;
-  border: 1px solid black;
-}
-.guitar_neck_17 {
-  width: 45px;
-  height: 40px;
-  border: 1px solid black;
-}
-.guitar_neck_18 {
-  width: 45px;
-  height: 40px;
-  border: 1px solid black;
+  border-left: 1px solid black;
 }
