@@ -1,29 +1,23 @@
 class Slider {
     constructor(container, options) {
-        this.options = {
+        const DEFAULT_OPTIONS = {
             activeSlide: 3,
             showPoints: true,
             showButtons: true,
             loop: true
         }
 
-
-        this.slides = container.querySelectorAll('.slide');
-
         this.createStructure(container);
-        // if (this.options.showButtons === true) {
-        //     createButtons(container);
-        // }
         this.createItem = container.querySelector('.slider__item');
         this.wrapPoint = container.querySelector('.points_wrapper');
 
         for (const slide of this.slides) {
-            if ((this.options.activeSlide) > this.slides.length) {
+            if ((this.DEFAULT_OPTIONS.activeSlide) > this.slides.length) {
                 this.createItem.appendChild(slide);
                 this.createPoint(container);
 
             } else if (this.options.activeSlide) {
-                this.activeSlide(this.options.activeSlide);
+                this.activeSlide(this.DEFAULT_OPTIONS.activeSlide);
                 this.createPoint(container)
 
             }
@@ -110,20 +104,4 @@ class Slider {
         } else point.classList.remove('point');
 
     }
-
-    createButtons(container) {
-        container.innerHTML =
-            `
-        <div class="buttons">
-                <button class="item_prev" type="button"></button>
-                <button class="item_next" type="button"></button>
-            </div>
-    `
-    }
-
-    animatios() {
-
-    }
-
-
 }
