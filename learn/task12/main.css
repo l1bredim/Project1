@@ -1,17 +1,31 @@
 .container_st {
+  display: ;
 }
 .build_guitars {
+  display: flex;
+  width: 120px;
 }
 .cell_1 {
+  width: 20px;
+  text-align: center;
 }
 .cell_2 {
+  width: 20px;
+  text-align: center;
 }
 .cell_3 {
+  width: 20px;
+  text-align: center;
 }
 .cell_5 {
+  width: 20px;
+  text-align: center;
 }
 .cell_6 {
+  width: 20px;
+  text-align: center;
 }
+
 .container_gn {
   display: flex;
   width: 120px;
