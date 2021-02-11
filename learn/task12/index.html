@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <div class="page">
 
     <div class="container_st">
         <div class="build_guitars">
@@ -56,6 +57,22 @@
         </div>
     </div>
     </div>
+
+    <div class="container_form">
+        <form action="filter">
+            <input type="search" class="input_search" placeholder="Введите название акорда">
+            <input list="accords" class="input_list">
+            <datalist id="accords">
+                <option>Am</option>
+                <option>G</option>
+                <option>Dm</option>
+                <option>E</option>
+                <option>Em</option>
+                <option>A</option>
+               </datalist> 
+        </form>
+    </div>
+</div>
     <script src="main.js"></script>
 </body>
 </html>

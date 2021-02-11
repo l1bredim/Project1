@@ -1,3 +1,8 @@
+.page {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
 .container_st {
   margin-left: 30px;
 }
@@ -30,4 +35,23 @@
   width: 45px;
   height: 40px;
   border-left: 1px solid black;
+}
+
+.container_form {
+  display: flex;
+  text-align: center;
+  width: 250px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.input_search {
+  margin-top: 5px;
+  width: 200px;
+}
+.input_list {
+  width: 192px;
+}
+::placeholder {
+  text-align: center;
 }
