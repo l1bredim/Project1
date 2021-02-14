@@ -3,16 +3,9 @@
   display: flex;
   justify-content: space-around;
 }
-.container_st {
-  margin-left: 30px;
-}
-.build_guitars {
-  display: flex;
-  width: 270px;
-}
-.cell:nth-child(n) {
-  width: 45px;
-  text-align: center;
+
+.accord-title {
+  font-size: 40px;
 }
 
 .wrapp {
@@ -30,6 +23,42 @@
   display: flex;
   height: 39px;
   border-bottom: 1px solid black;
+}
+
+.container_gn:nth-child(1)::before {
+  content: "E";
+  position: absolute;
+  margin-left: -30px;
+  margin-top: -7px;
+  font-size: 20px;
+}
+.container_gn:nth-child(2)::before {
+  content: "B";
+  position: absolute;
+  margin-left: -30px;
+  margin-top: -7px;
+  font-size: 20px;
+}
+.container_gn:nth-child(3)::before {
+  content: "D";
+  position: absolute;
+  margin-left: -30px;
+  margin-top: -7px;
+  font-size: 20px;
+}
+.container_gn:nth-child(4)::before {
+  content: "G";
+  position: absolute;
+  margin-left: -30px;
+  margin-top: -7px;
+  font-size: 20px;
+}
+.container_gn:nth-child(5)::before {
+  content: "A";
+  position: absolute;
+  margin-left: -30px;
+  margin-top: -7px;
+  font-size: 20px;
 }
 
 .guitar_neck:nth-child(n) {
@@ -54,19 +83,21 @@
 }
 
 .container_form {
-  width: 250px;
-  border: 1px solid black;
-  border-radius: 20px;
+  width: 220px;
+  border: 2px dashed black;
+  border-radius: 10px;
   text-align: center;
+  height: 100%;
 }
 
 .container_form ul {
   list-style: none;
   text-align: left;
+  margin: 0;
 }
 .input_search {
   margin-top: 5px;
-  width: 200px;
+  width: 180px;
 }
 
 ::placeholder {
