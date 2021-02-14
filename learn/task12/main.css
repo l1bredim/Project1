@@ -14,44 +14,65 @@
   width: 45px;
   text-align: center;
 }
+
 .wrapp {
-  display: inline-flex;
+  width: 270px;
+  background: black;
   flex-direction: column;
 }
 
-.container_gn {
+.container_gn:nth-child(n) {
   display: flex;
-  width: 270px;
-  height: 40px;
+  height: 39px;
+  border-top: 1px solid black;
+}
+.container_gn:nth-last-child(1) {
+  display: flex;
+  height: 39px;
+  border-bottom: 1px solid black;
 }
 
 .guitar_neck:nth-child(n) {
   width: 45px;
-  height: 40px;
-  border-right: 1px solid black;
-  border-top: 1px solid black;
+  height: 39px;
+  background: white;
+  margin-left: 1px;
 }
-.guitar_neck:nth-child(6n + 1) {
+.guitar_neck:last-child {
   width: 45px;
-  height: 40px;
-  border-left: 1px solid black;
+  height: 39px;
+  background: white;
+  margin-right: 1px;
+}
+
+.guitar_neck:first-child {
+  border-left: 2px solid black;
+  width: 45px;
+  height: 39px;
+  background: white;
+  margin-left: 1px;
 }
 
 .container_form {
-  display: flex;
-  text-align: center;
   width: 250px;
   border: 1px solid black;
   border-radius: 20px;
+  text-align: center;
 }
 
+.container_form ul {
+  list-style: none;
+  text-align: left;
+}
 .input_search {
   margin-top: 5px;
   width: 200px;
 }
-.input_list {
-  width: 192px;
-}
+
 ::placeholder {
   text-align: center;
+}
+
+input {
+  box-sizing: border-box;
 }
