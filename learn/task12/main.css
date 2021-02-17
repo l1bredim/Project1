@@ -58,7 +58,10 @@
   height: 29px;
   border-bottom: 1px solid black;
 }
-
+.guitar-neck-invisible:nth-child(n) {
+  width: 45px;
+  height: 29px;
+}
 .guitar-neck:nth-child(n) {
   width: 45px;
   height: 29px;
@@ -123,4 +126,9 @@ input {
 
 .container-gn-invisible {
   border: 1px solid black;
+}
+
+.wrapp-accord-absolute {
+  position: absolute;
+  margin-top: 30px;
 }
